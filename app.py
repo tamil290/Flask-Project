@@ -17,13 +17,13 @@ def greet(name=""):
         return "Hello!"
 
 
-def cel_to_fahrenheit(celsius):
-    return celsius * 9.0 / 5.0 + 32
+def cel_to_fahren(cel):
+    return cel * 9.0 / 5.0 + 32
 
 
 @app.route('/convert/<celsius>')
-def convert(celsius):
-    fahrenheit = cel_to_fahrenheit(float(celsius))
+def convert(cel):
+    fahrenheit = cel_to_fahren(float(cel))
     return f"The temperature in Fahrenheit is {fahrenheit}"
 
 
